@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Poppins:wght@400;600&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+:root{    
+    --clr-Violet: hsl(257, 40%, 49%);
+    --clr-Soft-Magenta: hsl(300, 69%, 71%);
+}
+body{
+    width: 100%;
+    margin: 0;
+    background-image: url(images/bg-desktop.svg);
+    background-color: var(--clr-Violet);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;    
+    font-family: "Poppins","Open Sans"; 
+    font-size: 16px;
+}
+.container{
+    margin: 5rem;
+    display: flex;
+}
+.logo{
+   margin-bottom: 3rem;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+h1{
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: white;
+}
+p{
+    font-family: "Open Sans";
+    font-weight: 400;
+    width: 88%;
+}
+button{
+    font-family: "Poppins";
+    font-weight: 400;
+    width: 10rem;
+    margin-top: 2rem;
+    height: 3rem;
+    border-radius: 3rem;
+    font-size: 0.95rem;
+    color: var(--clr-Violet);
+    border: none;
+}
+button:hover{
+    background-color: var(--clr-Soft-Magenta);
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;       
+    margin-right: 10%;
+}
+.icons i{
+    margin: 0 1rem;
+    font-size: 2rem;
+    color:  white;
+}
+.icons i:hover{
+    color: var(--clr-Soft-Magenta);
+}
+@media (width < 800px) {
+    body{        
+        background-image: url('./images/bg-mobile.svg');        
+        background-repeat:no-repeat;
+        background-size:contain;
+        background-size: 100% 100%;
+    }
+    .container{
+        margin: 0;
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #pic1{
+        width: 100%;
+        height:auto;
+    }
+    .text{
+        width: 100%;
+        margin-left: 1rem;
+    }
+    h1{
+        font-size: 1.7rem;
+    }
+    button{
+        margin-bottom: 5rem;
+    }
+}
